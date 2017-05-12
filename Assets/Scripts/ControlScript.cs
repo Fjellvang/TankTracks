@@ -6,11 +6,12 @@ public class ControlScript : MonoBehaviour {
 
 	CannonScripts cannon;
 	public float cannonSpeed = 10f;
+	MovementScript move;
 
 	// Use this for initialization
 	void Start () {
 		cannon = GetComponentInChildren <CannonScripts>();
-		
+		move = GetComponentInParent<MovementScript> ();
 	}
 	
 	// Update is called once per frame
@@ -29,6 +30,19 @@ public class ControlScript : MonoBehaviour {
 		bool r1button = Input.GetKey(KeyCode.JoystickButton5);
 		bool l2button = Input.GetKey(KeyCode.Joystick1Button6);
 		bool r2button = Input.GetKey(KeyCode.Joystick1Button7);
+
+		if (l1button) {
+			move.addForce ("topLeft",0.5f);
+		}
+		if (r1button) {
+			move.addForce ("topRight",0.5f);
+		}
+		if (R2 > 0) {
+			move.addForce ("bottomRight", R2);
+		}
+		if (L2 > 0) {
+			move.addForce ("bottomLeft", L2);
+		}
 		Debug.Log(string.Format("R2: {0},{1}, L2: {2},{3}, L1: {4} R1{5}, input: {6}", r2button, R2, l2button, L2, l1button, r1button, input));
 	}
 }

@@ -46,8 +46,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\CannonScripts.cs" />
-     <Compile Include="Assets\ControlScript.cs" />
+     <Compile Include="Assets\CameraFollow.cs" />
+     <Compile Include="Assets\MovementScript.cs" />
+     <Compile Include="Assets\Scripts\CannonScripts.cs" />
+     <Compile Include="Assets\Scripts\ControlScript.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/opt/UnityBeta/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
