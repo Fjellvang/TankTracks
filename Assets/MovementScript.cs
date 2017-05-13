@@ -21,7 +21,7 @@ public class MovementScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		//Debug.Log( rigid.velocity.magnitude);
 	}
 
 	public void addForce(string pos, float force){

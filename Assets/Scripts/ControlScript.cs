@@ -38,11 +38,11 @@ public class ControlScript : MonoBehaviour {
 			move.addForce ("topRight",0.5f);
 		}
 		if (R2 > 0) {
-			move.addForce ("bottomRight", R2);
+			move.addForce ("bottomRight", l1button && R2 > 0.5f? 0.5f : R2);
 		}
 		if (L2 > 0) {
-			move.addForce ("bottomLeft", L2);
+			move.addForce ("bottomLeft", r1button && L2 > 0.5f? 0.5f :L2);
 		}
-		Debug.Log(string.Format("R2: {0},{1}, L2: {2},{3}, L1: {4} R1{5}, input: {6}", r2button, R2, l2button, L2, l1button, r1button, input));
+		//Debug.Log(string.Format("R2: {0},{1}, L2: {2},{3}, L1: {4} R1{5}, input: {6}", r2button, R2, l2button, L2, l1button, r1button, input));
 	}
 }
